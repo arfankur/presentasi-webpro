@@ -1815,7 +1815,7 @@ button:focus {
     font-size: 1rem;
     color: #444;
     line-height: 2.25rem;
-    letter-spacing: 0.05rem;
+    letter-spacing: 0.02rem;
     text-align: justify;
     margin-bottom: 15px;
     /* font-family: serif; */
