@@ -1,12 +1,12 @@
-<?php 
-   $url = $this->uri->segment(3);
+<?php
+$url = $this->uri->segment(3);
 
-   if(isset($url)){
-      $query = $this->db->where('slug', $url)->get('category')->row();
-      $title = "Tentang " . $query->category_name;
-   }else{
-      $title = '';
-   }
+if (isset($url)) {
+   $query = $this->db->where('slug', $url)->get('category')->row();
+   $title = "Tentang " . $query->category_name;
+} else {
+   $title = '';
+}
 ?>
 
 <!--================News Area =================-->
@@ -18,8 +18,11 @@
                <h2>Semua Berita <?= $title ?></h2>
             </div>
             <div class="latest_news">
-               <?php foreach($post as $p)  :?>
-                  <div class="media">
+               <?php foreach ($post as $p) : ?>
+
+                  <!-- SAVE FOR LATER -->
+
+                  <!-- <div class="media">
                      <div class="d-flex">
                         <img class="img-fluid" src="<?= base_url("images/posting/medium/$p->photo") ?>" alt="">
                      </div>
@@ -37,7 +40,28 @@
                            <p><?= strip_tags(character_limiter($p->content, 100)) ?></p>
                         </div>
                      </div>
+                  </div> -->
+
+                  <!-- #SAVE FOR LATER -->
+
+                  <!-- TRY -->
+                  <div class="row">
+                     <div class="col-lg-3 mb-3">
+                        <img class="img-fluid" src="<?= base_url("images/posting/medium/$p->photo") ?>" alt="">
+                     </div>
+                     <div class="col-lg mb-5">
+                        <a class="gad_btn mb-2" href="<?= base_url("blog/read/$p->seo_title") ?>"><?= $p->category_name ?></a>
+                        <a style="color: black;" href="<?= base_url("blog/read/$p->seo_title") ?>" class="float-right"><i class="fa fa-calendar" aria-hidden="true">
+                           </i> &nbsp;  <?= mediumdate_indo($p->date) ?>
+                        </a>
+                        <a style="color: black;" href="<?= base_url("blog/read/$p->seo_title") ?>">
+                           <h4><?= $p->title ?></h4>
+                        </a>
+                        <p><?= strip_tags(character_limiter($p->content, 100)) ?></p>
+                     </div>
                   </div>
+                  <!-- #TRY -->
+
                <?php endforeach ?>
             </div>
 
@@ -47,13 +71,13 @@
                   <nav aria-label="Page navigation example">
                      <?= $pagination ?>
                   </nav>
-               </div> 
+               </div>
             </div>
             <!-- End of Pagination -->
-            
+
          </div>
          <!-- ================Sidebar================== -->
-         <?php 
+         <?php
          // $this->load->view('front/layouts/_sidebar', $trending) 
          ?>
          <!-- ================End of Sidebar================== -->
