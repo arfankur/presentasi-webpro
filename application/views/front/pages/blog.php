@@ -18,7 +18,8 @@ if (isset($url)) {
                <h2>Semua Berita <?= $title ?></h2>
             </div>
             <div class="latest_news">
-               <?php foreach ($post as $p) : ?>
+               <?php
+               foreach ($post as $p) : ?>
 
                   <!-- SAVE FOR LATER -->
 

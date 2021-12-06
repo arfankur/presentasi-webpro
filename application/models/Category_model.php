@@ -7,7 +7,7 @@ class Category_model extends CI_Model {
    
    public function getCategory()
    {
-      return $this->db->get($this->table)->result();
+      return $this->db->get_where($this->table,['is_active' => 'Y'])->result();
    }
 
 }
