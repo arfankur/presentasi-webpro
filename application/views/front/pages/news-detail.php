@@ -29,7 +29,7 @@
          <div class="col-lg-12">
             <div class="main_blog_details">
                <div class="d-flex justify-content-center">
-                  <img class="img-fluid" style="width: 64rem;" src="<?= base_url("images/posting/large/$posting->photo") ?>" alt="">
+                  <img class="img-fluid" style="width: 64rem;" src="<?= base_url("images/posting/$posting->photo") ?>" alt="">
                </div>
                <h4><?= $posting->title ?></h4>
                <div class="user_details">

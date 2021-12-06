@@ -48,7 +48,7 @@ if (isset($url)) {
                   <!-- TRY -->
                   <div class="row">
                      <div class="col-md-5 col-lg-3 mb-3">
-                        <img class="img-fluid" src="<?= base_url("images/posting/medium/$p->photo") ?>" alt="">
+                        <img class="img-fluid" width="100%" src="<?= base_url("images/posting/medium/$p->photo") ?>" alt="">
                      </div>
                      <div class="col-sm mb-5">
                         <a class="gad_btn mb-2" href="<?= base_url("blog/read/$p->seo_title") ?>"><?= $p->category_name ?></a>
