@@ -47,10 +47,10 @@ if (isset($url)) {
 
                   <!-- TRY -->
                   <div class="row">
-                     <div class="col-lg-3 mb-3">
+                     <div class="col-md-5 col-lg-3 mb-3">
                         <img class="img-fluid" src="<?= base_url("images/posting/medium/$p->photo") ?>" alt="">
                      </div>
-                     <div class="col-lg mb-5">
+                     <div class="col-sm mb-5">
                         <a class="gad_btn mb-2" href="<?= base_url("blog/read/$p->seo_title") ?>"><?= $p->category_name ?></a>
                         <a style="color: black;" href="<?= base_url("blog/read/$p->seo_title") ?>" class="float-right"><i class="fa fa-calendar" aria-hidden="true">
                            </i> &nbsp;  <?= mediumdate_indo($p->date) ?>
