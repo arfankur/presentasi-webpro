@@ -96,7 +96,7 @@
       </div>
          <div class="row mt-5">
             <div class="col text-center">
-               <a href="<?= base_url('blog') ?>" class="genric-btn dark-border circle arrow">Berita Lainnya<span class="lnr lnr-arrow-right"></span></a>
+               <a style="display: none;" href="<?= base_url('blog') ?>" class="genric-btn dark-border circle arrow">Berita Lainnya<span class="lnr lnr-arrow-right"></span></a>
             </div>
          </div>
    </div>
